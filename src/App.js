@@ -5,8 +5,8 @@ import items from "./data";
 
 function App() {
   const [item, setItem] = useState(items);
-  const elements = item.map((item) => {
-    const { id, img, desc, title, price } = item;
+  const elements = item.map((data) => {
+    const { id, img, desc, title, price } = data;
     return (
       <section key={id}>
         <img className="photo" src={img} alt={desc} />
