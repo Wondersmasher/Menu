@@ -6,21 +6,13 @@ import items from "./data";
 function App() {
   const [item, setItem] = useState(items);
   const elements = item.map((data) => {
-    const { id, img, desc, title, price } = data;
-    return (
-      <section key={id}>
-        <img className="photo" src={img} alt={desc} />
-        <h3>{title}</h3>
-        <p className="price">{price}</p>
-        <p className="item-info">{desc}</p>
-      </section>
-    );
+    // const { id, img, desc, title, price } = data;
+    return <Menu {...data} />;
   });
 
   return (
     <>
       {elements}
-      <Menu />
       <Categories />
     </>
   );
